@@ -1,0 +1,249 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #001a00, #004d00);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+   
+
+#header {
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+#playerName {
+    margin: 0;
+}
+
+#settingsButton {
+    background-color: #367038;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#settingsButton:hover {
+    background-color: #2f4230;
+}
+
+#gameContainer {
+    position: relative;
+    width: 70vw; /* Зменшено */
+    height: 70vw; /* Зменшено */
+    max-width: 250px; /* Зменшено */
+    max-height: 250px; /* Зменшено */
+    border: 5px solid #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#hamster {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/jpeg;base64,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');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer; /* Додаємо курсор для натискання */
+}
+
+#earningsDisplay {
+    font-size: 1.5em; /* Зменшено */
+    color: #ffffff; /* Залишаємо білий колір для заробітків */
+    margin: 20px 0;
+}
+
+#energyDisplay {
+    font-size: 1em;
+    color: white; /* Залишаємо білий колір */
+    margin-top: 15px;
+}
+
+#buttonContainer {
+    margin-top: 20px;
+}
+
+.actionButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.actionButton:hover {
+    background-color: #45a049;
+}
+
+/* Стилі для модального вікна */
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalContent {
+    background-color: #002200;
+    color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modalButton {
+    background-color: #3c633d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+}
+.modalButtonclose { 
+    background-color: #8b0000;
+    color: #ccc6c6;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%;
+}
+.modalButton:hover {
+    background-color: #45a049;
+}
+
+/* Стилі для вкладок */
+.tab {
+    display: none;
+}
+
+#mineTabContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #001a00, #004d00);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+#friendsTabContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0f240f, #1a411a);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+#earnTabContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #001a00, #004d00);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+#airdropTabContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #001a00, #004d00);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}  
+
+
+
+/* Стиль для нижньої панелі навігації */
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #182718; /* Темно-зелений фон */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.navButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+}
+
+.navButton:hover {
+    color: #5f9e61; /* Світліший зелений при наведенні */
+}
+
+/* Стилі для BTC PAIRS та ALT */
+.pairBox {
+    background-color: #010c01; /* Темно-зелений фон */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: calc(100% - 10px); /* Визначаємо ширину прямокутника */
+    position: relative; /* Додаємо позицію */
+}
+
+#buyButton {
+    background-color: #1e3f1f;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Для позиціонування кнопки */
+    right: 5px; /* Відступ від правого краю */
+    bottom: 11px; /* Відступ від нижнього краю */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Earn</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="header">
+        <p id="playerName">Ім'я гравця: Микола</p>
+        <button id="settingsButton">Налаштування</button>
+    </div>
+    <div id="navBar">
+        <button class="navButton" id="exchangeTab">Exchange</button>
+        <button class="navButton" id="mineTab">Mine</button>
+        <button class="navButton" id="friendsTab">Friends</button>
+        <button class="navButton" id="earnTab">Earn</button>
+        <button class="navButton" id="airdropTab">Airdrop</button>
+    </div>
+    <!-- Контент для вкладок -->
+    <div id="mineTabContent" class="tab">
+        <h2>Погодинний дохід</h2>
+        <div class="pairBox">
+            <div>BTC PAIRS: <span id="btcPairsPrice">$150</span></div>
+            <div>Profit per hour: <span id="profitPerHour">$100</span></div>
+            <button id="buyButton" onclick="buyBtcPairs()">Купити</button>
+            <div>Level: <span id="btcPairsLevel">1</span></div>
+        </div>
+        <div class="pairBox">
+            <div>alt PAIRS: <span id="altPairsPrice">$200</span></div>
+            <div>Profit per hour: <span id="profitPerHour">$100</span></div>
+            <button id="buyButton" onclick="buyaltPairs()">Купити</button>
+            <div>Level: <span id="altPairsLevel">1</span></div>
+        </div>
+
+    </div>
+    <div id="levelDisplay">Рівень: <span id="level">1</span>, Досвід: <span id="experience">0/100</span></div>
+    <div id="experienceProgressContainer" style="width: 100%; background-color: #ddd; border-radius: 5px; margin-top: 10px;">
+        <div id="experienceProgress" style="width: 0; height: 20px; background-color: #2c17a3; border-radius: 5px;"></div>
+    </div>
+    <div id="friendsTabContent" class="tab">
+        <h2>Friends</h2>
+        <div>Тут ви можете запросити своїх друзів і отримати винагороду!</div>
+    </div>
+
+    <div id="earnTabContent" class="tab">
+        <h2>Earn</h2>
+        <div>Тут ви можете получити винагороди за виконання завдань</div>
+    </div>
+
+    <div id="airdropTabContent" class="tab">
+        <h2>Airdrop</h2>
+        <div>Тут ви можете получити винагороди за працю</div>
+    </div>
+
+    
+
+    <!-- Модальне вікно -->
+    
+    <div id="earningsDisplay">Ваші заробітки: $<span id="earnings">0</span></div>
+
+    <div id="gameContainer">
+        <div id="hamster" onclick="handleTap()"></div> <!-- Додаємо обробник для натискання -->
+    </div>
+
+
+    <div id="energyDisplay">Енергія: <span id="energy">100</span></div>
+
+
+    </div>
+    <div id="modalOverlay">
+        <div id="modalContent">
+            <h2>Налаштування</h2>
+            <button class="modalButton" onclick="restartGame()">Перезавантажити гру</button>
+            <button class="modalButton" onclick="deleteAccount()">Видалити акаунт</button>
+            <button class="modalButton" onclick="chooseLanguage()">Вибір мови</button>
+            <button class="modalButton" onclick="closeModal()">Закрити</button>
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>
