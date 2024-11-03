@@ -152,7 +152,17 @@ body {
 .tab {
     display: none;
 }
-
+#exchangeTabContent { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #001a00, #004d00);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
 #mineTabContent {
     display: flex;
     flex-direction: column;
@@ -221,7 +231,7 @@ body {
 }
 
 .navButton:hover {
-    color: #5f9e61; /* Світліший зелений при наведенні */
+    color: #3c553d; /* Світліший зелений при наведенні */
 }
 
 /* Стилі для BTC PAIRS та ALT */
@@ -244,6 +254,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     position: absolute; /* Для позиціонування кнопки */
-    right: 5px; /* Відступ від правого краю */
+    right: 4px; /* Відступ від правого краю */
     bottom: 11px; /* Відступ від нижнього краю */
 }
