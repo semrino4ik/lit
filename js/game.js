@@ -1,5 +1,5 @@
 window.onload = () => {
-    showTab('mineTabContent'); // Show "Mine" tab by default
+    showTab('exchangeTabContent'); // Show "Mine" tab by default
  };
     
     let coins = 0; // Number of coins
@@ -11,10 +11,7 @@ window.onload = () => {
         updateDisplay();
     });
     
-    function updateDisplay() {
-        playerNameElement.innerText = `Монети: ${coins}`;
-    }
-    
+
     let earnings = 0;
     let currentEnergy = 100;
     const INITIAL_ENERGY = 100;
